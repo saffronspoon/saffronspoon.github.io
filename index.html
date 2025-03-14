@@ -4,43 +4,69 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Your Restaurant - Order Online</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;700&display=swap" rel="stylesheet">
     <style>
         body {
-            font-family: 'Arial', sans-serif;
-            background-color: #f4f4f4;
+            font-family: 'Raleway', sans-serif;
+            background: linear-gradient(135deg, #f6f6f6, #dcdcdc);
             color: #333;
             text-align: center;
             padding: 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            margin: 0;
         }
         h1 {
-            color: #d35400;
+            color: #e67e22;
+            font-size: 3em;
+            margin-bottom: 10px;
+        }
+        p {
+            font-size: 1.2em;
+            margin-bottom: 30px;
         }
         .container {
-            margin-top: 50px;
+            display: flex;
+            gap: 15px;
         }
         .link-button {
-            display: block;
-            width: 200px;
-            margin: 10px auto;
-            padding: 15px;
-            background-color: #ff5a5f;
-            color: #fff;
+            padding: 15px 25px;
+            border: none;
+            border-radius: 30px;
             text-decoration: none;
-            border-radius: 5px;
-            transition: background 0.3s;
+            color: #fff;
+            font-weight: bold;
+            font-size: 1.1em;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
         }
+        .link-button.zomato { background: #ff3e6c; }
+        .link-button.swiggy { background: #fc8019; }
+        .link-button.magicpin { background: #5e2ca5; }
+        
         .link-button:hover {
-            background-color: #e74c3c;
+            transform: translateY(-5px);
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+        }
+        footer {
+            margin-top: 20px;
+            font-size: 0.9em;
+            color: #555;
         }
     </style>
 </head>
 <body>
     <h1>Welcome to Your Restaurant!</h1>
-    <p>Order from your favorite delivery platforms:</p>
+    <p>Delicious meals delivered to your doorstep:</p>
     <div class="container">
-        <a class="link-button" href="https://www.zomato.com" target="_blank">Order on Zomato</a>
-        <a class="link-button" href="https://www.swiggy.com" target="_blank">Order on Swiggy</a>
-        <a class="link-button" href="https://www.magicpin.in" target="_blank">Order on Magic Pin</a>
+        <a class="link-button zomato" href="https://www.zomato.com" target="_blank">Order on Zomato</a>
+        <a class="link-button swiggy" href="https://www.swiggy.com" target="_blank">Order on Swiggy</a>
+        <a class="link-button magicpin" href="https://www.magicpin.in" target="_blank">Order on Magic Pin</a>
     </div>
+    <footer>© 2025 Your Restaurant | All rights reserved</footer>
 </body>
 </html>
